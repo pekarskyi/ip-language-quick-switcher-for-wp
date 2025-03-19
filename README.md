@@ -1,6 +1,6 @@
 # Language Quick Switcher for WordPress
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/pekarskyi/language-quick-switcher-for-wordpress?style=for-the-badge)](https://GitHub.com/pekarskyi/language-quick-switcher-for-wordpress/releases/)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/pekarskyi/language-quick-switcher-for-wordpress?style=for-the-badge)](https://github.com/pekarskyi/language-quick-switcher-for-wordpress/releases/)
 
 The plugin allows you to quickly switch between different languages without having to go into the general WP settings and profile settings.
 
