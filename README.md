@@ -1,0 +1,1 @@
+# wp-quick-select-lang
