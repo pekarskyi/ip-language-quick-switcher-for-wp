@@ -4,14 +4,14 @@
 
 The plugin allows you to quickly switch between different languages without having to go into the general WP settings and profile settings.
 
-## Screenshots
-![https://github.com/pekarskyi/assets/raw/master/language-quick-switcher-for-wordpress/language-quick-switcher-for-wordpress.jpg](https://github.com/pekarskyi/assets/raw/master/language-quick-switcher-for-wordpress/language-quick-switcher-for-wordpress.jpg)
-
 This plugin adds a language switcher to the admin panel:
 - Language switcher for current Profile
 - Language switcher for Public site
 
 This option is available only for site administrators!
+
+## Screenshots
+![https://github.com/pekarskyi/assets/raw/master/language-quick-switcher-for-wordpress/language-quick-switcher-for-wordpress.jpg](https://github.com/pekarskyi/assets/raw/master/language-quick-switcher-for-wordpress/language-quick-switcher-for-wordpress.jpg)
 
 ## Practical application:
 
@@ -36,6 +36,16 @@ This option is available only for site administrators!
 - After installation, click **Activate Plugin** to start using it.
 
 Now the plugin should be active and ready to use! 🚀
+
+## How to enable a language?
+
+To enable a language, open the `lang-quick-switcher-for-wp.php` file and uncomment the corresponding line (lines 18-53).
+Alternatively, you can add a new language by inserting a new line of code following the WP localization standards.
+
+[Language / locale codes used in WordPress](https://gist.github.com/pekarskyi/d7cb8e87528f4df31d0d38e3f42a5550)
+
+## How to disable a language?
+Simply comment out the corresponding line in the code (lines 18-53).
 
 ## Changelog
 
