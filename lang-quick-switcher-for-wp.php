@@ -1,6 +1,6 @@
 <?php
 /**
-* Plugin Name: Language Quick Switcher for WP
+* Plugin Name: IP Language Quick Switcher for WP
 * Description: Adds a language switcher to the admin panel
 * Version: 1.0
 * Plugin URI: https://github.com/pekarskyi/language-quick-switcher-for-wordpress
