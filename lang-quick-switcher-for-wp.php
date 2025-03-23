@@ -2,11 +2,10 @@
 /**
 * Plugin Name: IP Language Quick Switcher for WP
 * Description: Adds a language switcher to the admin panel
-* Version: 1.0
-* Plugin URI: https://github.com/pekarskyi/language-quick-switcher-for-wordpress
+* Version: 1.0.0
+* Plugin URI: https://github.com/pekarskyi/ip-language-quick-switcher-for-wp
 * Author: Mykola Pekarskyi
 * Author URI: https://inwebpress.com
-* URL
 * License: GPL3
 * License URI: https://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -148,3 +147,15 @@ add_action('init', function() {
 add_filter('locale', function($locale) {
     return isset($_COOKIE['site_lang']) ? $_COOKIE['site_lang'] : $locale;
 });
+
+// Adding update check via GitHub
+require_once plugin_dir_path( __FILE__ ) . 'updates/github-updater.php';
+if ( function_exists( 'ip_language_quick_switcher_for_wp_github_updater_init' ) ) {
+    ip_language_quick_switcher_for_wp_github_updater_init(
+        __FILE__,       // Plugin file path
+        'pekarskyi',     // Your GitHub username
+        '',              // Access token (empty)
+        'ip-language-quick-switcher-for-wp' // Repository name (optional)
+        // Other parameters are determined automatically
+    );
+} 

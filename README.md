@@ -49,8 +49,9 @@ Simply comment out the corresponding line in the code (lines 18-53).
 
 ## Changelog
 
-Version 1.0 - 20.03.2025:
+1.0.0 - 20.03.2025:
 - Stable release
+- ADDED: plugin version check and update function
 
 ## Links
 
