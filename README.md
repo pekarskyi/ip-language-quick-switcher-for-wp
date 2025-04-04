@@ -2,7 +2,7 @@
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/pekarskyi/language-quick-switcher-for-wordpress?style=for-the-badge)](https://github.com/pekarskyi/language-quick-switcher-for-wordpress/releases/)
 
-The plugin allows you to quickly switch between different languages without having to go into the general WP settings and profile settings.
+The plugin lets you quickly switch between different languages without digging into WordPress general or profile settings.
 
 This plugin adds a language switcher to the admin panel:
 - Language switcher for current Profile
@@ -21,25 +21,18 @@ This option is available only for site administrators!
 
 ## Install
 
-1. Download the Plugin
-- Go to the GitHub repository of the plugin.
-- Click on the **Code button** (green dropdown).
-- Select **Download ZIP** and save the file to your computer.
+### Option 1:
+1. Download the `IP Language Quick Switcher for WordPress` (green Code button - Download ZIP).
+2. Upload it to your WordPress site. Make sure the plugin folder is named "ip-language-quick-switcher-for-wp" (the name doesn't affect how the plugin works, but it does affect receiving future updates).
+3. Activate the plugin.
 
-2. Upload the Plugin to WordPress
-- Log in to your WordPress admin dashboard.
-- Go to Plugins → Add New.
-- Click the **Upload Plugin** button at the top.
-- Click Choose File, select the ZIP file you downloaded, and click Install Now.
-
-3. Activate the Plugin
-- After installation, click **Activate Plugin** to start using it.
-
-Now the plugin should be active and ready to use! 🚀
+### Option 2 (recommended):
+1. Install and activate this plugin (plugin installer): https://github.com/pekarskyi/ip-installer
+2. Using the `IP Installer` plugin, install and activate the `IP Language Quick Switcher for WordPress`.
 
 ## How to enable a language?
 
-To enable a language, open the `lang-quick-switcher-for-wp.php` file and uncomment the corresponding line (lines 18-53).
+To enable a language, open the `ip-language-quick-switcher-for-wp.php` file and uncomment the corresponding line (lines 18-53).
 Alternatively, you can add a new language by inserting a new line of code following the WP localization standards.
 
 [Language / locale codes used in WordPress](https://gist.github.com/pekarskyi/d7cb8e87528f4df31d0d38e3f42a5550)
@@ -49,12 +42,11 @@ Simply comment out the corresponding line in the code (lines 18-53).
 
 ## Changelog
 
+1.1.0 - 05-04-2025:
+- IMPROVED: Automatic updates from GitHub repository
+
 1.0.0 - 20.03.2025:
-- Stable release
+- Initial release
 - ADDED: plugin version check and update function
 
-## Links
-
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UC9ZEeT6WrGupgza9KXpazyA)](https://www.youtube.com/@inwebpress/videos)
-
-[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://justgo.ink/standwithukraine)

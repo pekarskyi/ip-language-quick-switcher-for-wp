@@ -1,11 +1,14 @@
 <?php
 /**
 * Plugin Name: IP Language Quick Switcher for WP
-* Description: Adds a language switcher to the admin panel
-* Version: 1.0.0
+* Description: The plugin lets you quickly switch between different languages without digging into WordPress general or profile settings.
+* Version: 1.1.0
 * Plugin URI: https://github.com/pekarskyi/ip-language-quick-switcher-for-wp
-* Author: Mykola Pekarskyi
+* Author: InwebPress
 * Author URI: https://inwebpress.com
+* Requires at least: 6.7.0
+* Tested up to: 6.7.2
+* Requires PHP: 7.4
 * License: GPL3
 * License URI: https://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -150,12 +153,27 @@ add_filter('locale', function($locale) {
 
 // Adding update check via GitHub
 require_once plugin_dir_path( __FILE__ ) . 'updates/github-updater.php';
-if ( function_exists( 'ip_language_quick_switcher_for_wp_github_updater_init' ) ) {
-    ip_language_quick_switcher_for_wp_github_updater_init(
-        __FILE__,       // Plugin file path
-        'pekarskyi',     // Your GitHub username
-        '',              // Access token (empty)
-        'ip-language-quick-switcher-for-wp' // Repository name (optional)
-        // Other parameters are determined automatically
-    );
+
+$github_username = 'pekarskyi'; // Вказуємо ім'я користувача GitHub
+$repo_name = 'ip-language-quick-switcher-for-wp'; // Вказуємо ім'я репозиторію GitHub, наприклад ip-wp-github-updater
+$prefix = 'ip_language_quick_switcher_for_wp'; // Встановлюємо унікальний префікс плагіну, наприклад ip_wp_github_updater
+
+// Ініціалізуємо систему оновлення плагіну з GitHub
+if ( function_exists( 'ip_github_updater_load' ) ) {
+    // Завантажуємо файл оновлювача з нашим префіксом
+    ip_github_updater_load($prefix);
+    
+    // Формуємо назву функції оновлення з префіксу
+    $updater_function = $prefix . '_github_updater_init';   
+    
+    // Після завантаження наша функція оновлення повинна бути доступна
+    if ( function_exists( $updater_function ) ) {
+        call_user_func(
+            $updater_function,
+            __FILE__,       // Plugin file path
+            $github_username, // Your GitHub username
+            '',              // Access token (empty)
+            $repo_name       // Repository name (на основі префіксу)
+        );
+    }
 } 
